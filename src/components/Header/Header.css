@@ -1,6 +1,6 @@
 .header {
     height: 80px;
-    background-color: #344b5a;
+    background-color: #852c4b;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,6 +10,8 @@
   nav.header a {
     text-decoration: none;
     color: white;
+    font-size: large;
+    font-weight: bold;
     margin-left: 30px;
   }
   
