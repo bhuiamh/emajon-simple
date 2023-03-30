@@ -1,23 +1,14 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import './Product.css'
 
-import defaultImage from '../../../src/images/logo1-removebg-preview.png'
-
-// const Product = (props) => {
-//     const {image_link, brand, category, description, name, price, product_type, website_link} = props.product;
-//     const fallbackImage = defaultImage;
-
-//     return (
-//         <div className='product'>
-
-//     <img src={image_link} onError={(e) => { e.target.onerror = null; e.target.src = fallbackImage; }}></img>
-//         </div>
-//     );
-// };
 
 const Product = (props) => {
     const { image_link, brand, category, description, name, price, website_link } = props.product;
     const [displayProduct, setDisplayProduct] = useState(true);
+    
+    const handelAddToCart = props.handelAddToCart
 
     const handleImageLoadError = () => {
         setDisplayProduct(false);
@@ -32,8 +23,9 @@ const Product = (props) => {
                 <p className='product-category'>{category}</p>
                 <p className='product-price'> ${price}</p>
                 <a href={website_link}>Details</a>
+
             </div>
-            <button className='btn-cart'>Add to Cart</button>
+            <button onClick={ () => handelAddToCart(props.product)} className='btn-cart'>Add to Cart  <FontAwesomeIcon icon={faShoppingCart}/></button>
         </div>
     );
 };
