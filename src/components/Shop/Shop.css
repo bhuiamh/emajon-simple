@@ -6,13 +6,17 @@
   }
   
   .products-container {
-    margin: 50px 80px 50px 100px;
+    margin: 50px ;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 45px;
   }
   
-  /* Styles for tablet screens */
+  .cart-container{
+    margin: 50px 20px 0 0;
+    border-radius: 3px;
+
+  }
   @media (max-width: 768px) {
     .shop-container {
       grid-template-columns: 1fr;
@@ -25,7 +29,6 @@
     }
   }
   
-  /* Styles for mobile screens */
   @media (max-width: 480px) {
     .products-container {
       margin: 50px 10px;

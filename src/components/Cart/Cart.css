@@ -1,0 +1,16 @@
+.cart{
+    background: #0072C6;
+    padding : 25px 5px 0 20px ;
+    border: #852c4b solid 1px;
+    border-radius: 4px;
+    position: sticky;
+    top: 10px;
+}
+
+.cart p{
+    font-size: 18px;
+}
+
+.cart p span{
+    color: rgba(255, 255, 255, 0.656);
+}

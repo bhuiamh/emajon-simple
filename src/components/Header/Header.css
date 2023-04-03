@@ -1,6 +1,6 @@
 .header {
     height: 80px;
-    background-color: #852c4b;
+    background: linear-gradient(to bottom, #420F14 0%, #C5545E 100%);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,8 +20,8 @@
   }
   
   .nav-logo {
-    height: 200px;
-    width: 200px;
+    height: 130px;
+    
   }
   
   @media (max-width: 991px) {
