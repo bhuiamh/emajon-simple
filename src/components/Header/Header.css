@@ -1,6 +1,6 @@
 .header {
     height: 80px;
-    background: linear-gradient(to bottom, #420F14 0%, #C5545E 100%);
+    background: #060047 ; 
     display: flex;
     justify-content: space-between;
     align-items: center;
