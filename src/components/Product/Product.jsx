@@ -6,16 +6,26 @@ import Swal from 'sweetalert2'
 
 
 const Product = (props) => {
-    const { api_featured_image, brand, category, description, name, price, website_link } = props.product;
+    const { img, brand, category, description, name, price, website_link } = props.product;
 
     const handelAddToCart = props.handelAddToCart
 
     const noPrice = () => price == 0;
 
+    const addToCart = () => {
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Product successfully added to your cart!',
+            showConfirmButton: false,
+            timer: 1500,
+        })
+    }
+
 
     return (
         <div className='product'>
-            <img src={api_featured_image} ></img>
+            <img src={img} ></img>
             <div className='product-info'>
                 <p className='product-name'>{name}</p>
                 <p className='product-category'>{category}</p>
@@ -34,6 +44,7 @@ const Product = (props) => {
                 }
                 else {
                     handelAddToCart(props.product);
+                    addToCart();
                 }
             }} className='btn-cart'>
                 Add to Cart <FontAwesomeIcon icon={faShoppingCart} />
